@@ -6,6 +6,13 @@ import Button from '../../components/shared/Button/Button';
 
 const Home = () => {
 
+  const signInLinkStyle=
+  {
+      color : '#F0F8FF',
+      fontWeight :'bold',
+      marginLeft :'10px',
+  };
+
 
   const navigate = useNavigate();
   function startRegister() {
@@ -19,9 +26,9 @@ const Home = () => {
   <div>
     <Button onClick={startRegister} text = 'Get your Username' />
   </div>
-  <div>
-     <span>Have an invite text?</span>
-     <Link to ="/login">Sign in</Link>
+  <div className ={styles.signInWrapper}>
+     <span className={styles.hasInvite}>Have an invite text?</span>
+     <Link style ={signInLinkStyle} to ="/login">Sign in</Link>
   </div>
   </Card>
 
